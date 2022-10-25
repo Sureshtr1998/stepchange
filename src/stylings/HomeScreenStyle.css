@@ -1,0 +1,145 @@
+@import url('./buttons.css');
+
+.homeScreen {
+  height: 100vh;
+}
+nav {
+  position: fixed;
+  top: 35%;
+  left: 3%;
+  bottom: auto;
+  z-index: 10;
+}
+.stemCss {
+  height: 350px;
+  width: 8px;
+  top: 36%;
+  left: 3%;
+  background: linear-gradient(to right, #7f3333, #4d2020);
+  border-radius: 25px;
+  position: fixed;
+  border-width: 0 0 0 1px;
+  border-color: transparent transparent transparent #000;
+  animation: fadeIn ease 3s;
+}
+.logoStep {
+  position: fixed;
+  width: 60px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 14px;
+}
+li {
+  padding: 10px 0;
+  margin-top: 25px;
+  animation: fadeIn ease 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.questionMark {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(141, 52, 0);
+}
+
+span {
+  display: inline-block;
+  position: relative;
+}
+nav a {
+  display: inline-block;
+  color: #094e12;
+  text-decoration: none;
+  font-size: 1em;
+}
+.rect {
+  -webkit-transition: -webkit-transform 0.6s, width 1s;
+  -moz-transition: -webkit-transform 0.6s, width 1s;
+  transition: transform 0.6s, width 1s;
+}
+nav a:hover,
+nav .active-section {
+  color: #1e721e;
+}
+nav a:hover .rect {
+  background-color: #02ac8d;
+  width: 30px;
+  height: 30px;
+  border-radius: 0 30px;
+  background: linear-gradient(to right, #7f3333, #4d2020);
+  transform: rotate(90deg);
+}
+
+nav .active-section .rect {
+  width: 30px;
+  height: 30px;
+  border-radius: 0 30px;
+  background: linear-gradient(to right, #77ed9e, #53ad71) !important;
+  transform: rotate(90deg);
+}
+nav .active-section .rect {
+  width: 40px;
+}
+.content-section {
+  position: relative;
+  width: 80%;
+  height: 100vh;
+  left: 50%;
+  background-color: rgba(250, 250, 250, 0);
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 1200px) {
+  .content-section {
+    height: 200vh;
+  }
+  nav {
+    display: none;
+  }
+  .stemCss {
+    display: none;
+  }
+  .bookDemoBtn {
+    display: none;
+  }
+}
+
+.slideRightAnimate {
+  animation: 2s slide-right;
+}
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+.content-section .componentContent {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
